@@ -1,0 +1,1 @@
+print ("ye ek mera pehla try hai jise me khud kar raha hu")
