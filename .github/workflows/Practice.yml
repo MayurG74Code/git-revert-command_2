@@ -1,0 +1,27 @@
+name: automation
+
+on:
+  workflow_dispatch:
+
+jobs:
+  code_received:
+      runs-on: ubuntu-latest
+      steps:
+        - name: print code is received
+          run: echo "the code is received"
+  build:
+      runs-on: ubuntu-latest
+      steps:
+        - name: build the code
+          run: echo "build the code"
+  test:
+      runs-on: ubuntu-latest
+      steps:
+        - name: test the application
+          run: echo "testing the app"
+  deploy:
+      runs-on: ubuntu-latest
+      steps:
+        - name: deploy the application
+          run: echo "please deploy the application"
+    
