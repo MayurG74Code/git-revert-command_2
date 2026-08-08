@@ -2,7 +2,14 @@ name: automation
 
 on:
   workflow_dispatch:
-
+   inputs:
+     environment:
+        description: choose the environment
+        type: choice
+        options:
+          - dev
+          - main
+          - test
 jobs:
   code_received:
       runs-on: ubuntu-latest
