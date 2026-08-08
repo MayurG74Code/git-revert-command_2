@@ -10,16 +10,19 @@ jobs:
         - name: print code is received
           run: echo "the code is received"
   build:
+      needs: code_received
       runs-on: ubuntu-latest
       steps:
         - name: build the code
           run: echo "build the code"
   test:
+      needs: build
       runs-on: ubuntu-latest
       steps:
         - name: test the application
           run: echo "testing the app"
   deploy:
+      needs: test
       runs-on: ubuntu-latest
       steps:
         - name: deploy the application
