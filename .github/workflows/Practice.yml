@@ -29,6 +29,7 @@ jobs:
         - name: test the application
           run: echo "testing the app"
   deploy:
+      if: inputs.environment== 'dev'
       needs: test
       runs-on: ubuntu-latest
       steps:
